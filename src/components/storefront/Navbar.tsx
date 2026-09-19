@@ -68,20 +68,23 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-14 md:h-16">
 
-            {/* Logo */}
+            {/* Logo + Brand Name */}
             <Link
               href="/"
-              className="shrink-0"
+              className="shrink-0 flex items-center gap-2.5"
               aria-label="DripCycle home"
             >
               <Image
                 src="/logo.png"
                 alt="DripCycle"
-                width={120}
-                height={48}
-                className="h-10 md:h-11 w-auto object-contain"
+                width={36}
+                height={36}
+                className="h-9 w-9 object-contain rounded-full"
                 priority
               />
+              <span className="text-base md:text-lg font-black tracking-[0.12em] uppercase leading-none">
+                DRIP<span className="text-dc-lime">CYCLE</span>
+              </span>
             </Link>
 
             {/* Desktop nav */}
