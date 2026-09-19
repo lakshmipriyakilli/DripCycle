@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { Search, Menu, X } from 'lucide-react'
@@ -70,10 +71,17 @@ export default function Navbar() {
             {/* Logo */}
             <Link
               href="/"
-              className="text-base md:text-lg font-black tracking-[0.18em] uppercase shrink-0"
+              className="shrink-0"
               aria-label="DripCycle home"
             >
-              DRIP<span className="text-dc-lime">CYCLE</span>
+              <Image
+                src="/logo.png"
+                alt="DripCycle"
+                width={120}
+                height={48}
+                className="h-10 md:h-11 w-auto object-contain"
+                priority
+              />
             </Link>
 
             {/* Desktop nav */}

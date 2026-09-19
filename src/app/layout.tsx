@@ -15,12 +15,18 @@ export const metadata: Metadata = {
     template: '%s | DripCycle',
   },
   description: 'Discover unique pre-loved fashion at DripCycle. Curated thrift finds — premium, sustainable, one-of-one.',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://dripcycle.vercel.app'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://drip-cycle.vercel.app'),
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     type: 'website',
     siteName: 'DripCycle',
     title: 'DripCycle — Premium Thrift Fashion',
     description: 'Discover unique pre-loved fashion at DripCycle. Curated thrift finds — premium, sustainable, one-of-one.',
+    images: [{ url: '/logo.png', width: 512, height: 512, alt: 'DripCycle' }],
   },
   twitter: {
     card: 'summary_large_image',

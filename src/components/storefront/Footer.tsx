@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { SiteSettings } from '@/types'
 
@@ -49,8 +50,14 @@ export default function Footer({ settings }: FooterProps) {
 
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="text-xl font-black tracking-[0.18em] uppercase block mb-4">
-              DRIP<span className="text-dc-lime">CYCLE</span>
+            <Link href="/" className="block mb-4">
+              <Image
+                src="/logo.png"
+                alt="DripCycle"
+                width={110}
+                height={44}
+                className="h-10 w-auto object-contain"
+              />
             </Link>
             <p className="text-dc-muted text-xs leading-relaxed max-w-[180px]">
               Premium pre-loved fashion. Curated one-of-one pieces for those who don't follow the cycle.
